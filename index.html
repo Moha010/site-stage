@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Stage Laravel</title>
+	<link rel='stylesheet' href='css/style.min.css' />
+
+	<style>
+		.rectangle {
+			border-radius: 20px;
+			height: 100%;
+			position: relative;
+			width: 100%;
+			padding: 20px;
+			background-color: black;
+			margin-bottom: 20px;
+		}
+
+
+		code {
+			font-family: Consolas, "courier new";
+			color: crimson;
+			background-color: #f1f1f1;
+			padding: 2px;
+		}
+
+		code::after {
+			content: "\a";
+			white-space: pre;
+		}
+
+
+		.main {
+			text-align: left;
+			left: 0;
+			right: 0;
+			color: rgb(73, 179, 140);
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Navbar -->
+	<div class="navbar navbar--extended">
+		<nav class="nav__mobile"></nav>
+		<div class="container">
+			<div class="navbar__inner">
+				<a href="index.html" class="navbar__logo">Mohamed Hafdi Idrissi</a>
+				<nav class="navbar__menu">
+					<ul>
+						<li><a href="#about">À propos</a></li>
+						<li><a href="#installation">Installation</a></li>
+						<li><a href="#repertoire">Répertoire</a></li>
+						<li><a href="#artisan">Artisan</a></li>
+						<li><a href="#notification">Notifications</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob"><a href="" id='toggle'>
+						<svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+							<path fill="currentColor"
+								d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+								class=""></path>
+						</svg></a></div>
+			</div>
+
+
+		</div>
+	</div>
+	<!-- Unit -->
+	<div class="hero">
+		<div class="hero__overlay hero__overlay--gradient"></div>
+		<div class="hero__mask"></div>
+		<div class="hero__inner">
+			<div class="container">
+				<div class="hero__content">
+					<div class="hero__content__inner" id='navConverter'>
+						<h1 class="hero__title">Stage chez <a href="https://ideesdefous.com/" target="_blank"
+								style="text-decoration: underline;">Groupe IDF</a></h1>
+						<img src="./images/laravelLogo.svg" style="width:65px; margin-right: 50px;">
+						<img src="./images/laravel.svg" width="250px">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="hero__sub">
+		<span id="scrollToNext" class="scroll">
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+				y="0px" class='hero__sub__down' fill="currentColor" width="512px" height="512px" viewBox="0 0 512 512"
+				style="enable-background:new 0 0 512 512;" xml:space="preserve">
+				<path
+					d="M256,298.3L256,298.3L256,298.3l174.2-167.2c4.3-4.2,11.4-4.1,15.8,0.2l30.6,29.9c4.4,4.3,4.5,11.3,0.2,15.5L264.1,380.9c-2.2,2.2-5.2,3.2-8.1,3c-3,0.1-5.9-0.9-8.1-3L35.2,176.7c-4.3-4.2-4.2-11.2,0.2-15.5L66,131.3c4.4-4.3,11.5-4.4,15.8-0.2L256,298.3z" />
+			</svg>
+		</span>
+	</div>
+	
+	<!-- About -->
+	<div class="steps landing__section" id="about">
+		<div class="container">
+			<h2>Qu'est ce que Laravel?</h2>
+			<p>Laravel est un framework d'application Web créé par Taylor Otwell. Ce framework est considéré le meilleur
+				framework web open-source codé en PHP en 2022.
+				Celui-ci facilite la création d'applications Web modernes. Avec sa syntaxe expressive et élégante (MVC),
+				Laravel nous permet de réduire les délais de développement et ainsi de terminer des produits plus
+				rapidement que toute autre solution.
+			</p>
+		</div>
+		<div class="container">
+			<div class="steps__inner">
+				<div class="step">
+					<div class="step__media">
+						<img src="./images/designer.svg" class="step__image">
+					</div>
+					<h4>Gestion de nombreux paquets</h4>
+					<p class="step__text">Artisan est l'interface de ligne de commande incluse avec Laravel. Artisan
+						fournit un certain nombre de commandes utiles qui peuvent vous aider lors de la création et
+						l'optimisation de votre application.</p>
+				</div>
+				<div class="step">
+					<div class="step__media">
+						<img src="./images/lol.png" class="step__image">
+					</div>
+					<h4>Migration de base de données</h4>
+					<p class="step__text">La migration de base de données est également l'un des plus grands avantages
+						de
+						l'utilisation de ce framework. Ces migrations permettent aux développeurs d'annuler facilement
+						les modifications apportées à la base de données en cas d'erreur et ainsi, d'avoir les mêmes
+						versions de base de données.
+					</p>
+				</div>
+				<div class="step">
+					<div class="step__media">
+						<img src="./images/creation.svg" class="step__image">
+					</div>
+					<h4>Architecture MVC</h4>
+					<p class="step__text">L'utilisation de l'architecture MVC améliore les performances des applications
+						Web. L'architecture Laravel est aussi l'une des raisons pour choisir le framework.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End About -->
+
+	<!-- Installation -->
+	<div class="expanded landing__section" id="installation">
+		<div class="container">
+			<div class="expanded__inner">
+				<div class="expanded__media">
+					<img src="./images/framework.svg" class="expanded__image">
+				</div>
+				<div class="expanded__content">
+					<h2 class="expanded__title">Installations requises</h2>
+					<p class="expanded__text">Pour gérer les dépendances, Laravel utilise composer. Il faut s'assurer
+						que <a href="https://getcomposer.org/download/">Composer</a> est installé sur votre système
+						avant d'installer Laravel. Il sera important de suivre les étapes d'installation afin de
+						permettre le bon fonctionnement à Laragon soit bien configuré.<br><br>
+						Ensuite, il faut installer la dernière version (Stable version) de <a
+							href="https://www.php.net/downloads">PHP</a>.<br>
+						Ensuite, on installe <a href="https://www.mysql.com/fr/downloads/">MySQL Workbench</a> pour nos
+						bases de données ainsi que <a
+							href="https://www.tutorialspoint.com/laravel/laravel_installation.htm">Laragon</a>, un
+						environnement de développement universel. Il a de
+						nombreuses
+						fonctionnalités pour vous rendre plus productif. Après le téléchargement, nous avons la
+						possibilité d'ajouter
+						<strong>Git, phpmyadmin, Node.js/MongoDB, Python/Django/Flask/Postgres, Ruby, Java, Go</strong>
+						en utilisant "Tools > Quick add".
+
+					<h4>Installation de Laravel: </h4>
+					<div class="rectangle">
+						<div class="main">
+							//Créer le projet<br>
+							composer create-project laravel/laravel example-app<br><br>
+							cd example-app<br><br>
+							//Exécuter le serveur de développement<br>
+							php artisan serve
+						</div>
+					</div>
+					La première commande permet d'installer automatiquement la dernière version de Laravel avec la
+					commande composer.<br>
+					Par la suite, on rentre dans la racine du projet.<br>
+					Et enfin, on lance la commande artisan serve permettant d'exécuter le projet sur le serveur de
+					développement.<br><br>
+					Le squelette de Laravel est prêt. Maintenant, voyons briévement l'architecture de ce framework.
+					</p>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Installation -->
+
+	<div class="expanded landing__section" id="repertoire">
+		<div class="container">
+			<div class="expanded__inner">
+				<div class="expanded__media">
+					<img src="./images/config/repo.png" height="500px">
+				</div>
+				<div class="expanded__content">
+					<h2 class="expanded__title">Répertoire Laravel</h2>
+					<p class="expanded__text">
+
+						Laravel a quelques similarités avec CakePHP mais il faut dire qu'il est beaucoup plus complet et
+						mieux structuré.
+
+					<h4>Voici les dossiers les plus importants:</h4>
+					<code>app</code>
+					Ce répertoire contient l'intégralité du code source de notre projet. Il y voit les fichiers de
+					modèles, contrôleurs, événements,
+					commandes, middleware et exceptions.<br><br>
+
+					<code>config</code>
+					Comme son nom l'indique clairement, celui-ci stocke tous les fichiers de configuration du
+					projet.<br><br>
+
+					<code>database</code>
+					Le fichier database est la place où nous mettons tous les fichiers de migrations, model factories et
+					seeders.
+					Ils déterminent la structure de la base de données.<br><br>
+
+					<code>public</code>
+					Ce répertoire contient le fichier index.php, qui est le point d'entrée de toutes les requêtes.
+					Ce répertoire héberge également vos actifs tels que les images, JS et CSS.<br><br>
+
+					<code>lang</code>
+					Le répertoire lang contient tous les fichiers de langue de l'application.<br><br>
+
+					<code>routes</code>
+					Le répertoire routes contient toutes les définitions de routes pour votre application. Par défaut,
+					il y a quatres fichiers routes: web.php, api.php, console.php et channels.php.
+					<ul>
+						<li>web.php<br>Le fichier contient des URL que le RouteServiceProvider place
+							dans le groupe de middleware Web, qui fournit l'état de la session, la protection CSRF et le
+							chiffrement des cookies.
+						</li>
+						<li>api.php<br>Il est important d'utiliser ce fichier lorsque nous offrons du API RESTful. C'est
+							donc ce fichier où l'on enregistre toutes les routes API. Les routes sont chargées par le
+							RouteServiceProvider qui se voit attribuer le groupe middleware nommé "api".
+						</li>
+						<li>channels.php<br>
+							Ce fichier est l'endroit où l'on peut enregistrer tous les canaux de
+							diffusion d'événements pris en charge par notre application.
+						</li>
+					</ul>
+
+					<code>resources</code>
+					Le répertoire des ressources contient les vues ainsi que les actifs bruts non compilés tels que du
+					CSS ou du JS.<br><br>
+
+					<code>storage</code>
+					Le répertoire storage contient les logs, Blade templates compilés, sessions basées sur des
+					fichiers, caches de fichiers et autres fichiers générés par le framework. Ce répertoire est séparé
+					en répertoires d'application, de structure et de logs. Le dossier logs contient les fichiers
+					journaux de votre application. Si configuré, on y trouvera les rapports d'erreurs de
+					l'application.<br><br>
+
+					<h4>Modèle - Vue - Contrôleur</h4>
+
+					<p class="expanded__text">Le "modèle" est une représentation d'une instance ou d'un objet réel dans
+						notre base de code. Son rôle est d'aller récupérer les informations « brutes » dans la base de
+						données, de les organiser et de les assembler pour qu'elles puissent ensuite être traitées par
+						le contrôleur. On y trouve donc entre autres les requêtes SQL.<br>
+						La "vue" représente l'interface à
+						travers laquelle l'utilisateur interagit avec notre application. Elle ne fait presque aucun
+						calcul et se contente de récupérer des variables pour savoir ce qu'elle doit afficher.<br>
+						Le "contrôleur" gère l'action des utilisateurs. Cette partie gère la
+						logique du code. C'est l'intermédiaire entre le modèle et la vue. C'est aussi celui qui
+						s'occupe de la gestion des droits d'accès du site et autres.<br><br>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Repertoire -->
+	<div class="expanded landing__section" id="artisan">
+		<div class="container">
+			<div class="expanded__inner">
+				<div class="expanded__media">
+					<img src="./images/browser.svg" class="expanded__image">
+				</div>
+				<div class="expanded__content">
+					<h2 class="expanded__title">Commandes Artisan:</h2>
+					<p class="expanded__text" style="margin-bottom: 0px !important;">
+						Artisan est le nom de l'interface de ligne de commande incluse avec Laravel. Il fournit un
+						certain nombre de commandes utiles pour votre utilisation lors du développement de votre
+						application. Il est piloté par le puissant composant Symfony Console.<br><br>
+
+					Afin d'en savoir plus sur l'utilité de ces commandes on écrit:
+					<div class="rectangle">
+						<div class="main">
+							//Liste toutes les commandes artisan<br>
+							php artisan list
+						</div>
+					</div>
+
+					Parmi commandes les plus importantes, nous retrouvons:
+					<div class="rectangle">
+						<div class="main">
+							//Créer un nouveau modèle appelé Client<br>
+							php artisan make:model Client<br><br>
+
+							//Créer un nouveau controlleur<br>
+							php artisan make:controller ClientController<br><br>
+
+							//Crée un nouveau fichier de migration<br>
+							php artisan make:migration create_clients_table<br><br>
+
+							//Crée un seeder de base de données<br>
+							php artisan make:seeder ClientsTableSeeder<br><br>
+
+
+							/*Une fois le fichier de migration complet, nous créerons la migration avec le
+							seeder:*/<br>//L'extension --seed spécifie qu'il faut aussi exécuter le seeder<br>
+							php artisan migrate --seed<br><br>
+
+							//Crée une commande<br>
+							php artisan make:command CheckAccountCommand<br><br>
+
+							//Crée une notification<br>
+							php artisan make:notification ErrorAccountNotification<br><br>
+						</div>
+					</div>
+
+					Pour faire court, nous avons créés un client (model, controller), une migration pour stocker les
+					clients dans notre base de données, un seeder afin de tester avec des faux clients.<br>De plus, nous
+					avons créé une commande qui permet de déterminer si le client a une erreur dans son dossier et
+					envoie une notification si c'est le cas.<br><br>
+
+					On constate que cela nous a pris quelques commandes pour créer la mojorité des fichiers nécessaires pour une application complète.<br><br>
+
+					
+
+					ELOQUENT
+					Il sera important d'utiliser PSR-4 si l'on veut coder en Eloquent.
+				
+				</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Call To Action -->
+	<div class="cta cta--reverse">
+		<div class="container">
+			<div class="cta__inner">
+				<h2 class="cta__title">Get started now</h2>
+				<p class="cta__sub cta__sub--center">Grab the production version and begin your project instantly.</p>
+				<a href="#" class="button button__accent">Download Evie</a>
+			</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<div class="footer footer--dark">
+		<div class="container">
+			<div class="footer__inner">
+				<a href="index.html" class="footer__textLogo">Evie theme</a>
+				<div class="footer__data">
+					<div class="footer__data__item">
+						<div class="footer__row">
+							Created by <a href="https://twitter.com/ninalimpi" target="_blank"
+								class="footer__link">Katerina Limpitsouni</a>
+						</div>
+						<div class="footer__row">
+							Code/design by <a href="https://twitter.com/anges244" target="_blank"
+								class="footer__link">Aggelos Gesoulis</a>
+						</div>
+					</div>
+					<div class="footer__data__item">
+						<div class="footer__row">Created for <a href="https://undraw.co" target="_blank"
+								class="footer__link">unDraw</a>
+						</div>
+					</div>Credite le site laravel, s/o
+					https://openclassrooms.com/fr/courses/4670706-adoptez-une-architecture-mvc-en-php/4678736-comment-fonctionne-une-architecture-mvc
+					.....
+					<div class="footer__data__item">
+						<div class="footer__row">
+							<a href="https://github.com/anges244/evie" target="_blank" class="footer__link">GitHub</a>
+						</div>
+						<div class="footer__row">
+							<a href="https://twitter.com/undraw_co" target="_blank" class="footer__link">Twitter</a>
+						</div>
+						<div class="footer__row">
+							<a href="https://www.facebook.com/undraw.co/" target="_blank"
+								class="footer__link">Facebook</a>
+						</div>
+						<div class="footer__row">
+							<a href="./additional.html" class="footer__link">MIT license</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src='js/app.min.js'></script>
+</body>
+
+</html>
