@@ -18,6 +18,13 @@
 			margin-bottom: 20px;
 		}
 
+		codeWithoutBr {
+			font-family: Consolas, 'courier new';
+			color: crimson;
+			background-color: #f1f1f1;
+			padding: 2px;
+		}
+
 
 		code {
 			font-family: Consolas, "courier new";
@@ -38,6 +45,14 @@
 			right: 0;
 			color: rgb(73, 179, 140);
 		}
+
+		#showHideCode {
+			/* width: 100%;
+			padding: 50px 0;
+			text-align: center;
+			background-color: lightblue;
+			margin-top: 20px; */
+		}
 	</style>
 </head>
 
@@ -54,6 +69,7 @@
 						<li><a href="#installation">Installation</a></li>
 						<li><a href="#repertoire">Répertoire</a></li>
 						<li><a href="#artisan">Artisan</a></li>
+						<li><a href="#eloquent">Eloquent</a></li>
 						<li><a href="#notification">Notifications</a></li>
 					</ul>
 				</nav>
@@ -113,7 +129,7 @@
 					<div class="step__media">
 						<img src="./img/designer.svg" class="step__image">
 					</div>
-					<h4>Gestion de nombreux paquets</h4>
+					<h4>Efficacité et simplicité</h4>
 					<p class="step__text">Artisan est l'interface de ligne de commande incluse avec Laravel. Artisan
 						fournit un certain nombre de commandes utiles qui peuvent vous aider lors de la création et
 						l'optimisation de votre application.</p>
@@ -283,13 +299,13 @@
 					<img src="./img/browser.svg" class="expanded__image">
 				</div>
 				<div class="expanded__content">
-					<h2 class="expanded__title">Commandes Artisan:</h2>
+					<h2 class="expanded__title">Commandes Artisan</h2>
 					<p class="expanded__text" style="margin-bottom: 0px !important;">
 						Artisan est le nom de l'interface de ligne de commande incluse avec Laravel. Il fournit un
 						certain nombre de commandes utiles pour votre utilisation lors du développement de votre
 						application. Il est piloté par le puissant composant Symfony Console.<br><br>
 
-					Afin d'en savoir plus sur l'utilité de ces commandes on écrit:
+						Afin d'en savoir plus sur l'utilité de ces commandes on écrit:
 					<div class="rectangle">
 						<div class="main">
 							//Liste toutes les commandes artisan<br>
@@ -318,7 +334,7 @@
 							php artisan migrate --seed<br><br>
 
 							//Crée une commande<br>
-							php artisan make:command CheckAccountCommand<br><br>
+							 <br><br>
 
 							//Crée une notification<br>
 							php artisan make:notification ErrorAccountNotification<br><br>
@@ -330,38 +346,163 @@
 					avons créé une commande qui permet de déterminer si le client a une erreur dans son dossier et
 					envoie une notification si c'est le cas.<br><br>
 
-					On constate que cela nous a pris quelques commandes pour créer la mojorité des fichiers nécessaires pour une application complète.<br><br>
+					On constate que cela nous a pris quelques commandes pour créer la mojorité des fichiers nécessaires
+					pour une application complète.<br><br>
 
-					
 
-				</p>
+
+					</p>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- End Artisan -->
 
-	<!-- Notifications -->
-	<div class="expanded landing__section" id="repertoire">
+	<!-- Eloquent -->
+	<div class="expanded landing__section" id="eloquent">
 		<div class="container">
 			<div class="expanded__inner">
 				<div class="expanded__media">
-					<img src="./img/config/notif.jpg" height="500px" class="app__image">
+					<img src="./img/config/library.jpg" height="600px" width="300px" class="app__image">
 				</div>
-				<div class="expanded__content">
-					<h2 class="expanded__title">Notifications</h2>
+				<div class="">
+					<h2 class="expanded__title">Eloquent</h2>
 					<p class="expanded__text">
-				
-					Avant de penser à créer une notification, il faudrait bien savoir utiliser le modèle de conception Eloquent.
-					https://www.google.com/search?q=how+to+use+eloquent&rlz=1C1CHBF_frCA933CA933&oq=how+to+use+eloquent&aqs=chrome..69i57.5807j0j7&sourceid=chrome&ie=UTF-8 
-					ELOQUENT
-					Il sera important d'utiliser PSR-4 si l'on veut coder en Eloquent.
+						Avant de penser à créer une notification, il faudrait bien savoir comment utiliser le modèle de
+						conception Eloquent pour aller chercher rapidement nos clients dans la base de données. J'ai
+						montré les mutiples commandes artisan ci-haut qui assurent le bon fonctionnement du modèle
+						Eloquent.<br>
+						De plus, il sera important d'utiliser PSR-4. Ce PSR décrit une spécification pour le chargement
+						automatique des classes à partir des chemins de fichiers. Il est entièrement interopérable. Ce
+						PSR décrit également où placer les fichiers qui seront chargés automatiquement conformément à la
+						spécification.<br><br>
+						Les méthodes Eloquent comme <codeWithoutBr>all</codeWithoutBr>
+						et <codeWithoutBr>get</codeWithoutBr> récupèrent plusieurs
+						enregistrements de la base de données. Cependant, ces méthodes ne renvoient pas un tableau PHP
+						simple. Au lieu de cela, une instance de <codeWithoutBr>Illuminate\Database\Eloquent\Collection
+						</codeWithoutBr>
+						est renvoyée.<br>
+						En utilisant Eloquent ORM, obtenir et trouver des enregistrements de la base de données est
+						gérable et facile. Les requêtes sont construites simplement. Pour
+						créer des instructions <codeWithoutBr>Model::where</codeWithoutBr>, on utilise les méthodes
+						<codeWithoutBr>get()</codeWithoutBr>et <codeWithoutBr>first()</codeWithoutBr>. La méthode
+						<codeWithoutBr>first()</codeWithoutBr> renverra un seul enregistrement, tandis que la méthode
+						<codeWithoutBr>get()</codeWithoutBr> renverra une collection
+						d'enregistrements sur lesquels on aura accès aux informations. De plus, la méthode
+						<codeWithoutBr>find()</codeWithoutBr> peut être
+						utilisée avec un tableau de clés primaires, qui renverra une collection d'enregistrements
+						correspondants.<br><br>Voici quelques exemples:
+					<div class="rectangle" style="width: 110%">
+						<div class="main">
+							//Va chercher tous les étudiants<br>
+							$students = Student::all();<br><br>
+
+							//Va chercher un étudiant selon son id (clé primaire dans la table)<br>
+							$student = Student::find(1);<br><br>
+
+							//Va chercher dans le modele Students, le premier étudiant au nom de John Doe<br>
+							$JohnDoe = Student::where('name', '=', 'John Doe')->first();
+						</div>
+					</div>
+					Nous avons vu comment récupérer des données de la bd mais que fait-on si l'on veut les mettre à jour
+					ou les supprimer?
+					C'est tout aussi facile:
+					<div class="rectangle" style="width: 140%">
+						<div class="main">
+							/*Modification*/<br>
+							//On récupère l'étudiant dans la variable, on modifie son âge et on exécute la méthode
+							save()<br>
+							$JohnDoe = Student::where('name', '=', 'John Doe')->first();<br>
+							$JohnDoe->age = 19;<br>
+							$JohnDoe->save();<br>
+							<br>
+							/*Supression*/<br>
+							$JohnDoe = Student::find(1);<br>
+							$JohnDoe->delete();
+						</div>
+					</div>
 					</p>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- End Notifications -->
+	<!-- End Eloquent -->
+
+	<!-- Notification -->
+	<div class="expanded landing__section" id="notification">
+		<div class="container">
+			<div class="expanded__inner">
+				<div class="expanded__media">
+					<img src="./img/config/notif.jpg" class="expanded__image">
+				</div>
+				<div class="expanded__content">
+					<h2 class="expanded__title">Notifications</h2>
+					<p class="expanded__text" style="margin-bottom: 0px !important;">
+						Il est possible d'envoyer des emails et notifications dans la grande majorité des réseaux
+						sociaux professionnels avec Laravel.
+						Nous allons expérimenter l'envoi de notifications dans Microsoft Teams.<br>
+						Tout d'abord, il va falloir installer le package "laravel-notification-channels/microsoft-teams"
+
+						Pour cela, on exécute cette commande via composer:
+					<div class="rectangle">
+						<div class="main">
+							composer require laravel-notification-channels/microsoft-teams
+						</div>
+					</div>
+					Premièrement, il faut ajouter le "service provider" dans <codeWithoutBr>config/app.php
+					</codeWithoutBr>:
+					<div class="rectangle">
+						<div class="main">
+							'providers' => [<br>
+							//....<br>
+							NotificationChannels\MicrosoftTeams\MicrosoftTeamsServiceProvider::class,<br>
+							],
+						</div>
+					</div>
+
+					De plus, il faut configurer notre connceteur (webhook connector) sur notre canal Teams:
+					<img src="./img/config/webhook0.png">
+					On copie le lien et le rajouterons dans le .env (notre fichier de configuration de projet local)
+					<div class="rectangle" style="width:130% !important">
+						<div class="main">
+							#TEAMS
+							TEAMS_WEBHOOK_URL="https://cmontmorency365.webhook.office.com/webhookb2/6b..."
+						</div>
+					</div>
+
+					Par la suite, on configure MicrosoftTeams service dans notre projet. Dans <codeWithoutBr>
+						config/services.php</codeWithoutBr>, on ajoute le webhook URL:
+					<div class="rectangle">
+						<div class="main">
+							'microsoft_teams' => [
+							'webhook_url' => env('TEAMS_WEBHOOK_URL'),
+							],
+						</div>
+					</div>
+					Vous êtes enfin prêts à utiliser ce package.
+					On crée alors le fichier de notification et le fichier de commande à l'aide de artisan comme montré précedemment:
+					<div class="rectangle">
+						<div class="main">
+							php artisan make:notification ErrorAccountNotification
+							php artisan make:command AccountCheckerCommand
+						</div>
+					</div>
+
+					Une fois le fichier créé, on ajoute Teams dans la méthode via(). Cette méthode s'occupe
+					d'envoyer la notification au service spécifié dans le tableau via().<br><br>
+
+					<button onclick="showHideCodeFunc()">Voir/cacher le code du fichier</button>
+
+					<div id="showHideCode">
+						<img src="./img/config/notificationCode.png">
+					</div>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Notification -->
+
 
 	<!-- Call To Action -->
 	<div class="cta cta--reverse">
@@ -414,6 +555,16 @@
 				</div>
 			</div>
 		</div>
+		<script>
+			function showHideCodeFunc() {
+				var x = document.getElementById("showHideCode");
+				if (x.style.display === "none") {
+					x.style.display = "block";
+				} else {
+					x.style.display = "none";
+				}
+			}
+		</script>
 		<script src='js/app.min.js'></script>
 </body>
 

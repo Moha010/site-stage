@@ -1033,7 +1033,7 @@ select {
   order: 2; }
   @media (min-width: 992px) {
     .expanded__content {
-      padding: 0 16pt;
+      padding: 0 0pt;
       width: 50%;
       flex-shrink: 0;
       order: unset; } }
