@@ -18,13 +18,25 @@
 			margin-bottom: 20px;
 		}
 
+		.tab1 {
+			margin-left: 3%;
+		}
+
+		.tab2 {
+			margin-left: 3em;
+		}
+
+		button {
+			transform: translate(240%, 50%);
+			background-color: #000000;
+		}
+
 		codeWithoutBr {
 			font-family: Consolas, 'courier new';
 			color: crimson;
 			background-color: #f1f1f1;
 			padding: 2px;
 		}
-
 
 		code {
 			font-family: Consolas, "courier new";
@@ -38,20 +50,20 @@
 			white-space: pre;
 		}
 
-
 		.main {
 			text-align: left;
 			left: 0;
 			right: 0;
+			font-family: 'Arial';
 			color: rgb(73, 179, 140);
 		}
 
-		#showHideCode {
-			/* width: 100%;
-			padding: 50px 0;
-			text-align: center;
-			background-color: lightblue;
-			margin-top: 20px; */
+		#showMoreCode {
+			display: none;
+		}
+
+		#showMoreCode2 {
+			display: none;
 		}
 	</style>
 </head>
@@ -334,7 +346,7 @@
 							php artisan migrate --seed<br><br>
 
 							//Crée une commande<br>
-							 <br><br>
+							<br><br>
 
 							//Crée une notification<br>
 							php artisan make:notification ErrorAccountNotification<br><br>
@@ -407,11 +419,11 @@
 					Nous avons vu comment récupérer des données de la bd mais que fait-on si l'on veut les mettre à jour
 					ou les supprimer?
 					C'est tout aussi facile:
-					<div class="rectangle" style="width: 140%">
+					<div class="rectangle" style="width: 110%">
 						<div class="main">
 							/*Modification*/<br>
-							//On récupère l'étudiant dans la variable, on modifie son âge et on exécute la méthode
-							save()<br>
+							//On récupère l'étudiant dans la variable, on modifie son âge et on exécute la
+							//méthode save()<br>
 							$JohnDoe = Student::where('name', '=', 'John Doe')->first();<br>
 							$JohnDoe->age = 19;<br>
 							$JohnDoe->save();<br>
@@ -419,6 +431,42 @@
 							/*Supression*/<br>
 							$JohnDoe = Student::find(1);<br>
 							$JohnDoe->delete();
+						</div>
+					</div>
+
+					En plus de la suppression effective des enregistrements de votre base de données, Eloquent peut
+					également "supprimer à la source" les modèles. Lorsque les modèles sont supprimés, ils ne sont pas
+					réellement supprimés de votre base de données. Au lieu de cela, un attribut <codeWithoutBr>
+						deleted_at</codeWithoutBr> est défini
+					sur le modèle et inséré dans la base de données. Si la valeur de l'attribut deleted_at d'un modèle
+					n'est pas nulle, le modèle a été supprimé. Pour activer les suppressions progressives d'un modèle,
+					il faudra utiliser le trait <codeWithoutBr>Illuminate\Database\Eloquent\SoftDeletes</codeWithoutBr>
+					sur le modèle et ajouter la
+					colonne deleted_at aux propriété $dates :
+
+					<div class="rectangle" style="width: 110%">
+						<div class="main">
+							&lt;?php<br>
+							<br>
+							namespace App;<br>
+							<br>
+							use Illuminate\Database\Eloquent\Model;<br>
+							use Illuminate\Database\Eloquent\SoftDeletes;<br>
+							<br>
+							class Client extends Model<br>
+							{<br>
+							<div class="tab1">
+								use SoftDeletes;<br>
+								<br>
+								/**<br>
+								* The attributes that should be mutated to dates.<br>
+								*<br>
+								* @var array<br>
+								*/<br>
+								protected $dates = ['deleted_at'];<br>
+							</div>
+							}
+
 						</div>
 					</div>
 					</p>
@@ -454,15 +502,18 @@
 					<div class="rectangle">
 						<div class="main">
 							'providers' => [<br>
-							//....<br>
-							NotificationChannels\MicrosoftTeams\MicrosoftTeamsServiceProvider::class,<br>
+							<div class="tab1">
+								//....<br>
+								NotificationChannels\MicrosoftTeams\MicrosoftTeamsServiceProvider::class,<br>
+							</div>
 							],
 						</div>
 					</div>
 
 					De plus, il faut configurer notre connceteur (webhook connector) sur notre canal Teams:
 					<img src="./img/config/webhook0.png">
-					On copie le lien et le rajouterons dans le .env (notre fichier de configuration de projet local)
+					On copie le lien du connecteur webhook et le rajouterons dans le .env (notre fichier de
+					configuration de projet local)
 					<div class="rectangle" style="width:130% !important">
 						<div class="main">
 							#TEAMS
@@ -480,22 +531,150 @@
 						</div>
 					</div>
 					Vous êtes enfin prêts à utiliser ce package.
-					On crée alors le fichier de notification et le fichier de commande à l'aide de artisan comme montré précedemment:
+					On crée alors le fichier de notification et le fichier de commande à l'aide de artisan comme
+					montré
+					précedemment:
 					<div class="rectangle">
 						<div class="main">
-							php artisan make:notification ErrorAccountNotification
+							php artisan make:notification ErrorAccountNotification<br>
 							php artisan make:command AccountCheckerCommand
 						</div>
 					</div>
 
-					Une fois le fichier créé, on ajoute Teams dans la méthode via(). Cette méthode s'occupe
-					d'envoyer la notification au service spécifié dans le tableau via().<br><br>
+					Une fois les fichiers créés, dans le fichier de notification, on ajoute Teams dans la méthode
+					via().
+					Cette méthode s'occupe
+					d'envoyer la notification au service spécifié dans le tableau via().<br><br>Le fichier
+					<code>Notification</code>
+					<div class="rectangle" style="width: 130% !important;">
+						<div class="main">
+							&lt?php<br>
+							<br>
+							namespace App\Notifications;<br>
+							<br>
 
-					<button onclick="showHideCodeFunc()">Voir/cacher le code du fichier</button>
-
-					<div id="showHideCode">
-						<img src="./img/config/notificationCode.png">
+							use Illuminate\Bus\Queueable;<br>
+							use App\Models\User;<br>
+							use Illuminate\Notifications\Notification;<br>
+							use NotificationChannels\MicrosoftTeams\MicrosoftTeamsChannel;<br>
+							use NotificationChannels\MicrosoftTeams\MicrosoftTeamsMessage;<br>
+							<br>
+							class ErrorAccountNotification extends Notification<br>
+							{<br>
+							<div id="showMoreCode">
+								<div class="tab1">
+									use Queueable;<br>
+									<br>
+									protected $user;<br>
+									<br>
+									/**<br>
+									* Create a new notification instance.<br>
+									*<br>
+									* @return void<br>
+									*/<br>
+									public function __construct(User $user)<br>
+									{<br>
+									<div class="tab1">$this->user = $user;<br></div>
+									}<br>
+									<br>
+									/**<br>
+									* Get the notification's delivery channels.<br>
+									*<br>
+									* @param mixed $notifiable<br>
+									* @return array<br>
+									*/<br>
+									public function via($notifiable)<br>
+									{<br>
+									<div class="tab1">return [MicrosoftTeamsChannel::class];<br></div>
+									}<br>
+									<br>
+									public function toMicrosoftTeams($notifiable)<br>
+									{<br>
+									<div class="tab1">return MicrosoftTeamsMessage::create()</div>
+									<div class="tab2">
+										->to(env('TEAMS_WEBHOOK_URL'))<br>
+										->type('error')<br>
+										->title('Erreur de paiement')
+										->content('Bonjour, ' . $this->user->name .<br>
+										',&lt;br&gt;&lt;br&gt;Votre paiement a été refusé. Veuillez mettre à jour
+										votre
+										mode de paiement.&lt;br&gt;')<br>
+										->button('Voir votre compte', 'https://google.com');<br></div>
+									}<br>
+								</div>
+								}<br>
+							</div>
+						</div>
+						<button id="leBtn" onclick="showMoreCodeFunc()">Voir plus</button>
 					</div>
+
+					Le fichier <code>Command</code>
+					<div class="rectangle" style="width: 130% !important">
+						<div class="main">
+
+							&lt;?php<br>
+							namespace App\Console\Commands;<br>
+							<br>
+							use App\Notifications\ErrorAccountNotification;<br>
+							use Illuminate\Support\Facades\Notification;<br>
+							use Illuminate\Console\Command;<br>
+							use App\Models\User;<br>
+							<br>
+							class AccountCheckerCommand extends Command<br>
+
+							{<br>
+							<div id="showMoreCode2">
+								<div class="tab1">
+									/**<br>
+									<div class="tab1">
+										* The name and signature of the console command.<br>
+										* @var string<br></div>
+									*/<br>
+									protected $signature = 'command:acct';<br>
+									<br>
+									/**<br>
+									* The console command description.<br>
+									*
+									* @var string<br>
+									*/<br>
+									protected $description = 'Envoie notification au premier utilisateur de la bd
+									(id=1)';<br>
+									<br>
+									/**<br>
+									<div class="tab1">
+										* Execute the console command.<br>
+										*<br>
+										* @return int<br></div>
+									*/<br>
+									public function handle()<br>
+
+									{<br>
+									<div class="tab1">
+										$user = User::find(1);<br>
+										<br>
+										Notification::route(NotificationChannels\MicrosoftTeams\MicrosoftTeamsChannel::class,
+										config('services.teams.webhook_url'))
+										-&gt;notify(new ErrorAccountNotification($user));<br>
+									</div>}<br>
+								</div>
+								}<br>
+							</div>
+
+						</div><br>
+						<button id="leBtn2" onclick="showMoreCodeFunc2()">Voir plus</button>
+					</div>
+
+					Par la suite, nous lancerons la commande du fichier ci-haut:
+					<div class="rectangle">
+						<div class="main">
+							php artisan command:acct
+						</div>
+					</div>
+
+					Finalement, je recois instantanèment la notification dans mon canal.
+					<img src="./img/config/teamsMessage.png">
+
+
 					</p>
 				</div>
 			</div>
@@ -507,10 +686,17 @@
 	<!-- Call To Action -->
 	<div class="cta cta--reverse">
 		<div class="container">
-			<div class="cta__inner">
-				<h2 class="cta__title">Get started now</h2>
-				<p class="cta__sub cta__sub--center">Grab the production version and begin your project instantly.</p>
-				<a href="#" class="button button__accent">Download Evie</a>
+
+
+			<div class="">
+				<h2 class="cta__title" style="margin-left: 20px;">Références</h2>
+				<p style="margin-left: -150% !important;">
+				<ul>
+					<a href="https://laravel.com/docs/9.x/installation">Documentation Laravel</a><br>
+					<a href="https://openclassrooms.com/fr/courses/4670706-adoptez-une-architecture-mvc-en-php/4678736-comment-fonctionne-une-architecture-mvc	">Openclassrooms</a><br>
+					<a href="https://github.com/laravel-notification-channels/microsoft-teams">Package Teams</a><br>
+				</ul>
+				</p>
 			</div>
 		</div>
 	</div>
@@ -534,9 +720,7 @@
 						<div class="footer__row">Created for <a href="https://undraw.co" target="_blank"
 								class="footer__link">unDraw</a>
 						</div>
-					</div>Credite le site laravel, s/o
-					https://openclassrooms.com/fr/courses/4670706-adoptez-une-architecture-mvc-en-php/4678736-comment-fonctionne-une-architecture-mvc
-					.....
+					</div>
 					<div class="footer__data__item">
 						<div class="footer__row">
 							<a href="https://github.com/anges244/evie" target="_blank" class="footer__link">GitHub</a>
@@ -556,13 +740,18 @@
 			</div>
 		</div>
 		<script>
-			function showHideCodeFunc() {
-				var x = document.getElementById("showHideCode");
-				if (x.style.display === "none") {
-					x.style.display = "block";
-				} else {
-					x.style.display = "none";
-				}
+			function showMoreCodeFunc() {
+				var x = document.getElementById("showMoreCode");
+				x.style.display = "block";
+				var y = document.getElementById("leBtn");
+				y.style.display = "none";
+			}
+
+			function showMoreCodeFunc2() {
+				var x = document.getElementById("showMoreCode2");
+				x.style.display = "block";
+				var y = document.getElementById("leBtn2");
+				y.style.display = "none";
 			}
 		</script>
 		<script src='js/app.min.js'></script>
