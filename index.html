@@ -5,8 +5,7 @@
 	<meta class="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title>Stage Laravel</title>
-	<link rel='stylesheet' href='css/style.min.css' />
-
+	<link rel='stylesheet' href='css/style.min.css'>
 	<style>
 		.rectangle {
 			border-radius: 20px;
@@ -77,26 +76,39 @@
 				<a href="index.html" class="navbar__logo">Mohamed Hafdi Idrissi</a>
 				<nav class="navbar__menu">
 					<ul>
-						<li><a href="#about">À propos</a></li>
-						<li><a href="#installation">Installation</a></li>
-						<li><a href="#repertoire">Répertoire</a></li>
-						<li><a href="#artisan">Artisan</a></li>
-						<li><a href="#eloquent">Eloquent</a></li>
-						<li><a href="#notification">Notifications</a></li>
+						<li>
+							<a href="#about">À propos</a>
+						</li>
+						<li>
+							<a href="#installation">Installation</a>
+						</li>
+						<li>
+							<a href="#repertoire">Répertoire</a>
+						</li>
+						<li>
+							<a href="#artisan">Artisan</a>
+						</li>
+						<li>
+							<a href="#eloquent">Eloquent</a>
+						</li>
+						<li>
+							<a href="#notification">Notifications</a>
+						</li>
+						<li>
+							<a href="#conclu">Conclusion</a>
+						</li>
 					</ul>
 				</nav>
-				<div class="navbar__menu-mob"><a href="" id='toggle'>
-						<svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+				<div class="navbar__menu-mob">
+					<a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512">
 							<path fill="currentColor"
 								d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
-								class=""></path>
-						</svg></a></div>
+								class></path>
+						</svg></a>
+				</div>
 			</div>
-
-
 		</div>
-	</div>
-	<!-- Unit -->
+	</div><!-- Unit -->
 	<div class="hero">
 		<div class="hero__overlay hero__overlay--gradient"></div>
 		<div class="hero__mask"></div>
@@ -105,345 +117,286 @@
 				<div class="hero__content">
 					<div class="hero__content__inner" id='navConverter'>
 						<h1 class="hero__title">Stage chez <a href="https://ideesdefous.com/" target="_blank"
-								style="text-decoration: underline;">Groupe IDF</a></h1>
-						<img src="./img/laravelLogo.svg" style="width:65px; margin-right: 50px;">
-						<img src="./img/laravel.svg" width="250px">
+								style="text-decoration: underline;">Groupe IDF</a></h1><img src="./img/laravelLogo.svg"
+							style="width:65px; margin-right: 50px;" alt="laravelLogo"> <img src="./img/laravel.svg"
+							width="250px" alt="laravel">
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="hero__sub">
-		<span id="scrollToNext" class="scroll">
-			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-				y="0px" class='hero__sub__down' fill="currentColor" width="512px" height="512px" viewBox="0 0 512 512"
-				style="enable-background:new 0 0 512 512;" xml:space="preserve">
+		<span id="scrollToNext" class="scroll"><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" class='hero__sub__down' fill="currentColor"
+				width="512px" height="512px" viewbox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+				xml:space="preserve">
 				<path
-					d="M256,298.3L256,298.3L256,298.3l174.2-167.2c4.3-4.2,11.4-4.1,15.8,0.2l30.6,29.9c4.4,4.3,4.5,11.3,0.2,15.5L264.1,380.9c-2.2,2.2-5.2,3.2-8.1,3c-3,0.1-5.9-0.9-8.1-3L35.2,176.7c-4.3-4.2-4.2-11.2,0.2-15.5L66,131.3c4.4-4.3,11.5-4.4,15.8-0.2L256,298.3z" />
-			</svg>
-		</span>
-	</div>
-
-	<!-- About -->
+					d="M256,298.3L256,298.3L256,298.3l174.2-167.2c4.3-4.2,11.4-4.1,15.8,0.2l30.6,29.9c4.4,4.3,4.5,11.3,0.2,15.5L264.1,380.9c-2.2,2.2-5.2,3.2-8.1,3c-3,0.1-5.9-0.9-8.1-3L35.2,176.7c-4.3-4.2-4.2-11.2,0.2-15.5L66,131.3c4.4-4.3,11.5-4.4,15.8-0.2L256,298.3z">
+				</path>
+			</svg></span>
+	</div><!-- About -->
 	<div class="steps landing__section" id="about">
 		<div class="container">
 			<h2>Qu'est ce que Laravel?</h2>
 			<p>Laravel est un framework d'application Web créé par Taylor Otwell. Ce framework est considéré le meilleur
-				framework web open-source codé en PHP en 2022.
-				Celui-ci facilite la création d'applications Web modernes. Avec sa syntaxe expressive et élégante (MVC),
-				Laravel nous permet de réduire les délais de développement et ainsi de terminer des produits plus
-				rapidement que toute autre solution.
-			</p>
+				framework web open-source codé en PHP en 2022. Celui-ci facilite la création d'applications Web
+				modernes. Avec sa syntaxe expressive et élégante (MVC), Laravel nous permet de réduire les délais de
+				développement et ainsi de terminer des produits plus rapidement que toute autre solution.</p>
 		</div>
 		<div class="container">
 			<div class="steps__inner">
 				<div class="step">
-					<div class="step__media">
-						<img src="./img/designer.svg" class="step__image">
-					</div>
+					<div class="step__media"><img src="./img/designer.svg" class="step__image" alt="designer"></div>
 					<h4>Efficacité et simplicité</h4>
 					<p class="step__text">Artisan est l'interface de ligne de commande incluse avec Laravel. Artisan
 						fournit un certain nombre de commandes utiles qui peuvent vous aider lors de la création et
 						l'optimisation de votre application.</p>
 				</div>
 				<div class="step">
-					<div class="step__media">
-						<img src="./img/lol.png" class="step__image">
-					</div>
+					<div class="step__media"><img src="./img/lol.png" class="step__image" alt="lol"></div>
 					<h4>Migration de base de données</h4>
 					<p class="step__text">La migration de base de données est également l'un des plus grands avantages
-						de
-						l'utilisation de ce framework. Ces migrations permettent aux développeurs d'annuler facilement
-						les modifications apportées à la base de données en cas d'erreur et ainsi, d'avoir les mêmes
-						versions de base de données.
-					</p>
+						de l'utilisation de ce framework. Ces migrations permettent aux développeurs d'annuler
+						facilement les modifications apportées à la base de données en cas d'erreur et ainsi, d'avoir
+						les mêmes versions de base de données.</p>
 				</div>
 				<div class="step">
-					<div class="step__media">
-						<img src="./img/creation.svg" class="step__image">
-					</div>
+					<div class="step__media"><img src="./img/creation.svg" class="step__image" alt="creation"></div>
 					<h4>Architecture MVC</h4>
 					<p class="step__text">L'utilisation de l'architecture MVC améliore les performances des applications
 						Web. L'architecture Laravel est aussi l'une des raisons pour choisir le framework.</p>
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- End About -->
-
+	</div><!-- End About -->
 	<!-- Installation -->
 	<div class="expanded landing__section" id="installation">
 		<div class="container">
 			<div class="expanded__inner">
-				<div class="expanded__media">
-					<img src="./img/framework.svg" class="expanded__image">
+				<div class="expanded__media"><img src="./img/framework.svg" class="expanded__image" alt="framework">
 				</div>
 				<div class="expanded__content">
 					<h2 class="expanded__title">Installations requises</h2>
 					<p class="expanded__text">Pour gérer les dépendances, Laravel utilise composer. Il faut s'assurer
 						que <a href="https://getcomposer.org/download/">Composer</a> est installé sur votre système
 						avant d'installer Laravel. Il sera important de suivre les étapes d'installation afin de
-						permettre le bon fonctionnement à Laragon soit bien configuré.<br><br>
+						permettre le bon fonctionnement à Laragon soit bien configuré.<br>
+						<br>
 						Ensuite, il faut installer la dernière version (Stable version) de <a
 							href="https://www.php.net/downloads">PHP</a>.<br>
 						Ensuite, on installe <a href="https://www.mysql.com/fr/downloads/">MySQL Workbench</a> pour nos
 						bases de données ainsi que <a
 							href="https://www.tutorialspoint.com/laravel/laravel_installation.htm">Laragon</a>, un
-						environnement de développement universel. Il a de
-						nombreuses
-						fonctionnalités pour vous rendre plus productif. Après le téléchargement, nous avons la
-						possibilité d'ajouter
-						<strong>Git, phpmyadmin, Node.js/MongoDB, Python/Django/Flask/Postgres, Ruby, Java, Go</strong>
-						en utilisant "Tools > Quick add".
-
-					<h4>Installation de Laravel: </h4>
+						environnement de développement universel. Il a de nombreuses fonctionnalités pour vous rendre
+						plus productif. Après le téléchargement, nous avons la possibilité d'ajouter <strong>Git,
+							phpmyadmin, Node.js/MongoDB, Python/Django/Flask/Postgres, Ruby, Java, Go</strong> en
+						utilisant "Tools &gt; Quick add".
+					</p>
+					<h4>Installation de Laravel:</h4>
 					<div class="rectangle">
 						<div class="main">
 							//Créer le projet<br>
-							composer create-project laravel/laravel example-app<br><br>
-							cd example-app<br><br>
+							composer create-project laravel/laravel example-app<br>
+							<br>
+							cd example-app<br>
+							<br>
 							//Exécuter le serveur de développement<br>
 							php artisan serve
 						</div>
-					</div>
-					La première commande permet d'installer automatiquement la dernière version de Laravel avec la
+					</div>La première commande permet d'installer automatiquement la dernière version de Laravel avec la
 					commande composer.<br>
 					Par la suite, on rentre dans la racine du projet.<br>
 					Et enfin, on lance la commande artisan serve permettant d'exécuter le projet sur le serveur de
-					développement.<br><br>
+					développement.<br>
+					<br>
 					Le squelette de Laravel est prêt. Maintenant, voyons briévement l'architecture de ce framework.
-					</p>
-
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- End Installation -->
-
+	</div><!-- End Installation -->
 	<div class="expanded landing__section" id="repertoire">
 		<div class="container">
 			<div class="expanded__inner">
-				<div class="expanded__media">
-					<img src="./img/config/repo.png" height="500px">
-				</div>
+				<div class="expanded__media"><img src="./img/config/repo.png" height="500px" alt="repo"></div>
 				<div class="expanded__content">
 					<h2 class="expanded__title">Répertoire Laravel</h2>
-					<p class="expanded__text">
-
-						Laravel a quelques similarités avec CakePHP mais il faut dire qu'il est beaucoup plus complet et
-						mieux structuré.
-
-					<h4>Voici les dossiers les plus importants:</h4>
-					<code>app</code>
-					Ce répertoire contient l'intégralité du code source de notre projet. Il y voit les fichiers de
-					modèles, contrôleurs, événements,
-					commandes, middleware et exceptions.<br><br>
-
-					<code>config</code>
-					Comme son nom l'indique clairement, celui-ci stocke tous les fichiers de configuration du
-					projet.<br><br>
-
-					<code>database</code>
-					Le fichier database est la place où nous mettons tous les fichiers de migrations, model factories et
-					seeders.
-					Ils déterminent la structure de la base de données.<br><br>
-
-					<code>public</code>
-					Ce répertoire contient le fichier index.php, qui est le point d'entrée de toutes les requêtes.
-					Ce répertoire héberge également vos actifs tels que les img, JS et CSS.<br><br>
-
-					<code>lang</code>
-					Le répertoire lang contient tous les fichiers de langue de l'application.<br><br>
-
-					<code>routes</code>
-					Le répertoire routes contient toutes les définitions de routes pour votre application. Par défaut,
-					il y a quatres fichiers routes: web.php, api.php, console.php et channels.php.
+					<p class="expanded__text">Laravel a quelques similarités avec CakePHP mais il faut dire qu'il est
+						beaucoup plus complet et mieux structuré.</p>
+					<h4>Voici les dossiers les plus importants:</h4><code>app</code> Ce répertoire contient
+					l'intégralité du code source de notre projet. Il y voit les fichiers de modèles, contrôleurs,
+					événements, commandes, middleware et exceptions.<br>
+					<br>
+					<code>config</code> Comme son nom l'indique clairement, celui-ci stocke tous les fichiers de
+					configuration du projet.<br>
+					<br>
+					<code>database</code> Le fichier database est la place où nous mettons tous les fichiers de
+					migrations, model factories et seeders. Ils déterminent la structure de la base de données.<br>
+					<br>
+					<code>public</code> Ce répertoire contient le fichier index.php, qui est le point d'entrée de toutes
+					les requêtes. Ce répertoire héberge également vos actifs tels que les img, JS et CSS.<br>
+					<br>
+					<code>lang</code> Le répertoire lang contient tous les fichiers de langue de l'application.<br>
+					<br>
+					<code>routes</code> Le répertoire routes contient toutes les définitions de routes pour votre
+					application. Par défaut, il y a quatres fichiers routes: web.php, api.php, console.php et
+					channels.php.
 					<ul>
-						<li>web.php<br>Le fichier contient des URL que le RouteServiceProvider place
-							dans le groupe de middleware Web, qui fournit l'état de la session, la protection CSRF et le
-							chiffrement des cookies.
+						<li>web.php<br>
+							Le fichier contient des URL que le RouteServiceProvider place dans le groupe de middleware
+							Web, qui fournit l'état de la session, la protection CSRF et le chiffrement des cookies.
 						</li>
-						<li>api.php<br>Il est important d'utiliser ce fichier lorsque nous offrons du API RESTful. C'est
-							donc ce fichier où l'on enregistre toutes les routes API. Les routes sont chargées par le
-							RouteServiceProvider qui se voit attribuer le groupe middleware nommé "api".
-						</li>
+						<li>api.php<br>
+							Il est important d'utiliser ce fichier lorsque nous offrons du API RESTful. C'est donc ce
+							fichier où l'on enregistre toutes les routes API. Les routes sont chargées par le
+							RouteServiceProvider qui se voit attribuer le groupe middleware nommé "api".</li>
 						<li>channels.php<br>
-							Ce fichier est l'endroit où l'on peut enregistrer tous les canaux de
-							diffusion d'événements pris en charge par notre application.
-						</li>
-					</ul>
-
-					<code>resources</code>
-					Le répertoire des ressources contient les vues ainsi que les actifs bruts non compilés tels que du
-					CSS ou du JS.<br><br>
-
-					<code>storage</code>
-					Le répertoire storage contient les logs, Blade templates compilés, sessions basées sur des
-					fichiers, caches de fichiers et autres fichiers générés par le framework. Ce répertoire est séparé
-					en répertoires d'application, de structure et de logs. Le dossier logs contient les fichiers
-					journaux de votre application. Si configuré, on y trouvera les rapports d'erreurs de
-					l'application.<br><br>
-
+							Ce fichier est l'endroit où l'on peut enregistrer tous les canaux de diffusion d'événements
+							pris en charge par notre application.</li>
+					</ul><code>resources</code> Le répertoire des ressources contient les vues ainsi que les actifs
+					bruts non compilés tels que du CSS ou du JS.<br>
+					<br>
+					<code>storage</code> Le répertoire storage contient les logs, Blade templates compilés, sessions
+					basées sur des fichiers, caches de fichiers et autres fichiers générés par le framework. Ce
+					répertoire est séparé en répertoires d'application, de structure et de logs. Le dossier logs
+					contient les fichiers journaux de votre application. Si configuré, on y trouvera les rapports
+					d'erreurs de l'application.<br>
+					<br>
 					<h4>Modèle - Vue - Contrôleur</h4>
-
 					<p class="expanded__text">Le "modèle" est une représentation d'une instance ou d'un objet réel dans
 						notre base de code. Son rôle est d'aller récupérer les informations « brutes » dans la base de
 						données, de les organiser et de les assembler pour qu'elles puissent ensuite être traitées par
 						le contrôleur. On y trouve donc entre autres les requêtes SQL.<br>
-						La "vue" représente l'interface à
-						travers laquelle l'utilisateur interagit avec notre application. Elle ne fait presque aucun
-						calcul et se contente de récupérer des variables pour savoir ce qu'elle doit afficher.<br>
-						Le "contrôleur" gère l'action des utilisateurs. Cette partie gère la
-						logique du code. C'est l'intermédiaire entre le modèle et la vue. C'est aussi celui qui
-						s'occupe de la gestion des droits d'accès du site et autres.<br><br>
+						La "vue" représente l'interface à travers laquelle l'utilisateur interagit avec notre
+						application. Elle ne fait presque aucun calcul et se contente de récupérer des variables pour
+						savoir ce qu'elle doit afficher.<br>
+						Le "contrôleur" gère l'action des utilisateurs. Cette partie gère la logique du code. C'est
+						l'intermédiaire entre le modèle et la vue. C'est aussi celui qui s'occupe de la gestion des
+						droits d'accès du site et autres.<br>
+						<br>
 					</p>
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- End Repertoire -->
-
+	</div><!-- End Repertoire -->
 	<!-- Artisan -->
 	<div class="expanded landing__section" id="artisan">
 		<div class="container">
 			<div class="expanded__inner">
-				<div class="expanded__media">
-					<img src="./img/browser.svg" class="expanded__image">
-				</div>
+				<div class="expanded__media"><img src="./img/browser.svg" class="expanded__image" alt="browser"></div>
 				<div class="expanded__content">
 					<h2 class="expanded__title">Commandes Artisan</h2>
-					<p class="expanded__text" style="margin-bottom: 0px !important;">
-						Artisan est le nom de l'interface de ligne de commande incluse avec Laravel. Il fournit un
-						certain nombre de commandes utiles pour votre utilisation lors du développement de votre
-						application. Il est piloté par le puissant composant Symfony Console.<br><br>
-
+					<p class="expanded__text" style="margin-bottom: 0px !important;">Artisan est le nom de l'interface
+						de ligne de commande incluse avec Laravel. Il fournit un certain nombre de commandes utiles pour
+						votre utilisation lors du développement de votre application. Il est piloté par le puissant
+						composant Symfony Console.<br>
+						<br>
 						Afin d'en savoir plus sur l'utilité de ces commandes on écrit:
+					</p>
 					<div class="rectangle">
 						<div class="main">
 							//Liste toutes les commandes artisan<br>
 							php artisan list
 						</div>
-					</div>
-
-					Parmi commandes les plus importantes, nous retrouvons:
+					</div>Parmi commandes les plus importantes, nous retrouvons:
 					<div class="rectangle">
 						<div class="main">
 							//Créer un nouveau modèle appelé Client<br>
-							php artisan make:model Client<br><br>
-
+							php artisan make:model Client<br>
+							<br>
 							//Créer un nouveau controlleur<br>
-							php artisan make:controller ClientController<br><br>
-
+							php artisan make:controller ClientController<br>
+							<br>
 							//Crée un nouveau fichier de migration<br>
-							php artisan make:migration create_clients_table<br><br>
-
+							php artisan make:migration create_clients_table<br>
+							<br>
 							//Crée un seeder de base de données<br>
-							php artisan make:seeder ClientsTableSeeder<br><br>
-
-
-							/*Une fois le fichier de migration complet, nous créerons la migration avec le
-							seeder:*/<br>//L'extension --seed spécifie qu'il faut aussi exécuter le seeder<br>
-							php artisan migrate --seed<br><br>
-
+							php artisan make:seeder ClientsTableSeeder<br>
+							<br>
+							/*Une fois le fichier de migration complet, nous créerons la migration avec le seeder:*/<br>
+							//L'extension --seed spécifie qu'il faut aussi exécuter le seeder<br>
+							php artisan migrate --seed<br>
+							<br>
 							//Crée une commande<br>
-							<br><br>
-
+							<br>
+							<br>
 							//Crée une notification<br>
-							php artisan make:notification ErrorAccountNotification<br><br>
+							php artisan make:notification ErrorAccountNotification<br>
+							<br>
 						</div>
-					</div>
-
-					Pour faire court, nous avons créés un client (model, controller), une migration pour stocker les
-					clients dans notre base de données, un seeder afin de tester avec des faux clients.<br>De plus, nous
-					avons créé une commande qui permet de déterminer si le client a une erreur dans son dossier et
-					envoie une notification si c'est le cas.<br><br>
-
+					</div>Pour faire court, nous avons créés un client (model, controller), une migration pour stocker
+					les clients dans notre base de données, un seeder afin de tester avec des faux clients.<br>
+					De plus, nous avons créé une commande qui permet de déterminer si le client a une erreur dans son
+					dossier et envoie une notification si c'est le cas.<br>
+					<br>
 					On constate que cela nous a pris quelques commandes pour créer la mojorité des fichiers nécessaires
-					pour une application complète.<br><br>
-
-
-
-					</p>
+					pour une application complète.<br>
+					<br>
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- End Artisan -->
-
+	</div><!-- End Artisan -->
 	<!-- Eloquent -->
 	<div class="expanded landing__section" id="eloquent">
 		<div class="container">
 			<div class="expanded__inner">
-				<div class="expanded__media">
-					<img src="./img/config/library.jpg" height="600px" width="300px" class="app__image">
-				</div>
+				<div class="expanded__media"><img src="./img/config/library.jpg" height="600px" width="300px"
+						class="app__image" alt="library"></div>
 				<div class="">
 					<h2 class="expanded__title">Eloquent</h2>
-					<p class="expanded__text">
-						Avant de penser à créer une notification, il faudrait bien savoir comment utiliser le modèle de
-						conception Eloquent pour aller chercher rapidement nos clients dans la base de données. J'ai
-						montré les mutiples commandes artisan ci-haut qui assurent le bon fonctionnement du modèle
-						Eloquent.<br>
+					<p class="expanded__text">Avant de penser à créer une notification, il faudrait bien savoir comment
+						utiliser le modèle de conception Eloquent pour aller chercher rapidement nos clients dans la
+						base de données. J'ai montré les mutiples commandes artisan ci-haut qui assurent le bon
+						fonctionnement du modèle Eloquent.<br>
 						De plus, il sera important d'utiliser PSR-4. Ce PSR décrit une spécification pour le chargement
 						automatique des classes à partir des chemins de fichiers. Il est entièrement interopérable. Ce
 						PSR décrit également où placer les fichiers qui seront chargés automatiquement conformément à la
-						spécification.<br><br>
-						Les méthodes Eloquent comme <codeWithoutBr>all</codeWithoutBr>
-						et <codeWithoutBr>get</codeWithoutBr> récupèrent plusieurs
-						enregistrements de la base de données. Cependant, ces méthodes ne renvoient pas un tableau PHP
-						simple. Au lieu de cela, une instance de <codeWithoutBr>Illuminate\Database\Eloquent\Collection
-						</codeWithoutBr>
-						est renvoyée.<br>
+						spécification.<br>
+						<br>
+						Les méthodes Eloquent comme all et get récupèrent plusieurs enregistrements de la base de
+						données. Cependant, ces méthodes ne renvoient pas un tableau PHP simple. Au lieu de cela, une
+						instance de Illuminate\Database\Eloquent\Collection est renvoyée.<br>
 						En utilisant Eloquent ORM, obtenir et trouver des enregistrements de la base de données est
-						gérable et facile. Les requêtes sont construites simplement. Pour
-						créer des instructions <codeWithoutBr>Model::where</codeWithoutBr>, on utilise les méthodes
-						<codeWithoutBr>get()</codeWithoutBr>et <codeWithoutBr>first()</codeWithoutBr>. La méthode
-						<codeWithoutBr>first()</codeWithoutBr> renverra un seul enregistrement, tandis que la méthode
-						<codeWithoutBr>get()</codeWithoutBr> renverra une collection
-						d'enregistrements sur lesquels on aura accès aux informations. De plus, la méthode
-						<codeWithoutBr>find()</codeWithoutBr> peut être
-						utilisée avec un tableau de clés primaires, qui renverra une collection d'enregistrements
-						correspondants.<br><br>Voici quelques exemples:
+						gérable et facile. Les requêtes sont construites simplement. Pour créer des instructions
+						Model::where, on utilise les méthodes get()et first(). La méthode first() renverra un seul
+						enregistrement, tandis que la méthode get() renverra une collection d'enregistrements sur
+						lesquels on aura accès aux informations. De plus, la méthode find() peut être utilisée avec un
+						tableau de clés primaires, qui renverra une collection d'enregistrements correspondants.<br>
+						<br>
+						Voici quelques exemples:
+					</p>
 					<div class="rectangle" style="width: 110%">
 						<div class="main">
 							//Va chercher tous les étudiants<br>
-							$students = Student::all();<br><br>
-
+							$students = Student::all();<br>
+							<br>
 							//Va chercher un étudiant selon son id (clé primaire dans la table)<br>
-							$student = Student::find(1);<br><br>
-
+							$student = Student::find(1);<br>
+							<br>
 							//Va chercher dans le modele Students, le premier étudiant au nom de John Doe<br>
-							$JohnDoe = Student::where('name', '=', 'John Doe')->first();
+							$JohnDoe = Student::where('name', '=', 'John Doe')-&gt;first();
 						</div>
-					</div>
-					Nous avons vu comment récupérer des données de la bd mais que fait-on si l'on veut les mettre à jour
-					ou les supprimer?
-					C'est tout aussi facile:
+					</div>Nous avons vu comment récupérer des données de la bd mais que fait-on si l'on veut les mettre
+					à jour ou les supprimer? C'est tout aussi facile:
 					<div class="rectangle" style="width: 110%">
 						<div class="main">
 							/*Modification*/<br>
-							//On récupère l'étudiant dans la variable, on modifie son âge et on exécute la
-							//méthode save()<br>
-							$JohnDoe = Student::where('name', '=', 'John Doe')->first();<br>
-							$JohnDoe->age = 19;<br>
-							$JohnDoe->save();<br>
+							//On récupère l'étudiant dans la variable, on modifie son âge et on exécute la //méthode
+							save()<br>
+							$JohnDoe = Student::where('name', '=', 'John Doe')-&gt;first();<br>
+							$JohnDoe-&gt;age = 19;<br>
+							$JohnDoe-&gt;save();<br>
 							<br>
 							/*Supression*/<br>
 							$JohnDoe = Student::find(1);<br>
-							$JohnDoe->delete();
+							$JohnDoe-&gt;delete();
 						</div>
-					</div>
-
-					En plus de la suppression effective des enregistrements de votre base de données, Eloquent peut
-					également "supprimer à la source" les modèles. Lorsque les modèles sont supprimés, ils ne sont pas
-					réellement supprimés de votre base de données. Au lieu de cela, un attribut <codeWithoutBr>
-						deleted_at</codeWithoutBr> est défini
-					sur le modèle et inséré dans la base de données. Si la valeur de l'attribut deleted_at d'un modèle
-					n'est pas nulle, le modèle a été supprimé. Pour activer les suppressions progressives d'un modèle,
-					il faudra utiliser le trait <codeWithoutBr>Illuminate\Database\Eloquent\SoftDeletes</codeWithoutBr>
-					sur le modèle et ajouter la
-					colonne deleted_at aux propriété $dates :
-
+					</div>En plus de la suppression effective des enregistrements de votre base de données, Eloquent
+					peut également "supprimer à la source" les modèles. Lorsque les modèles sont supprimés, ils ne sont
+					pas réellement supprimés de votre base de données. Au lieu de cela, un attribut deleted_at est
+					défini sur le modèle et inséré dans la base de données. Si la valeur de l'attribut deleted_at d'un
+					modèle n'est pas nulle, le modèle a été supprimé. Pour activer les suppressions progressives d'un
+					modèle, il faudra utiliser le trait Illuminate\Database\Eloquent\SoftDeletes sur le modèle et
+					ajouter la colonne deleted_at aux propriété $dates :
 					<div class="rectangle" style="width: 110%">
 						<div class="main">
 							&lt;?php<br>
@@ -464,95 +417,70 @@
 								* @var array<br>
 								*/<br>
 								protected $dates = ['deleted_at'];<br>
-							</div>
-							}
-
+							</div>}
 						</div>
 					</div>
-					</p>
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- End Eloquent -->
-
+	</div><!-- End Eloquent -->
 	<!-- Notification -->
 	<div class="expanded landing__section" id="notification">
 		<div class="container">
 			<div class="expanded__inner">
-				<div class="expanded__media">
-					<img src="./img/config/notif.jpg" class="expanded__image">
+				<div class="expanded__media"><img src="./img/config/notif.jpg" class="expanded__image" alt="notif">
 				</div>
 				<div class="expanded__content">
 					<h2 class="expanded__title">Notifications</h2>
-					<p class="expanded__text" style="margin-bottom: 0px !important;">
-						Il est possible d'envoyer des emails et notifications dans la grande majorité des réseaux
-						sociaux professionnels avec Laravel.
+					<p class="expanded__text" style="margin-bottom: 0px !important;">Il est possible d'envoyer des
+						emails et notifications dans la grande majorité des réseaux sociaux professionnels avec Laravel.
 						Nous allons expérimenter l'envoi de notifications dans Microsoft Teams.<br>
 						Tout d'abord, il va falloir installer le package "laravel-notification-channels/microsoft-teams"
-
-						Pour cela, on exécute cette commande via composer:
+						Pour cela, on exécute cette commande via composer:</p>
 					<div class="rectangle">
 						<div class="main">
 							composer require laravel-notification-channels/microsoft-teams
 						</div>
-					</div>
-					Premièrement, il faut ajouter le "service provider" dans <codeWithoutBr>config/app.php
-					</codeWithoutBr>:
+					</div>Premièrement, il faut ajouter le "service provider" dans config/app.php :
 					<div class="rectangle">
 						<div class="main">
-							'providers' => [<br>
+							'providers' =&gt; [<br>
 							<div class="tab1">
 								//....<br>
 								NotificationChannels\MicrosoftTeams\MicrosoftTeamsServiceProvider::class,<br>
-							</div>
-							],
+							</div>],
 						</div>
-					</div>
-
-					De plus, il faut configurer notre connceteur (webhook connector) sur notre canal Teams:
-					<img src="./img/config/webhook0.png">
-					On copie le lien du connecteur webhook et le rajouterons dans le .env (notre fichier de
-					configuration de projet local)
+					</div>De plus, il faut configurer notre connceteur (webhook connector) sur notre canal Teams: <img
+						src="./img/config/webhook0.png" alt="webhook0"> On copie le lien du connecteur webhook et le
+					rajouterons dans le .env (notre fichier de configuration de projet local)
 					<div class="rectangle" style="width:130% !important">
 						<div class="main">
-							#TEAMS
-							TEAMS_WEBHOOK_URL="https://cmontmorency365.webhook.office.com/webhookb2/6b..."
+							#TEAMS TEAMS_WEBHOOK_URL="https://cmontmorency365.webhook.office.com/webhookb2/6b..."
 						</div>
-					</div>
-
-					Par la suite, on configure MicrosoftTeams service dans notre projet. Dans <codeWithoutBr>
-						config/services.php</codeWithoutBr>, on ajoute le webhook URL:
+					</div>Par la suite, on configure MicrosoftTeams service dans notre projet. Dans config/services.php,
+					on ajoute le webhook URL:
 					<div class="rectangle">
 						<div class="main">
-							'microsoft_teams' => [
-							'webhook_url' => env('TEAMS_WEBHOOK_URL'),
-							],
+							'microsoft_teams' =&gt; [ 'webhook_url' =&gt; env('TEAMS_WEBHOOK_URL'), ],
 						</div>
-					</div>
-					Vous êtes enfin prêts à utiliser ce package.
-					On crée alors le fichier de notification et le fichier de commande à l'aide de artisan comme
-					montré
-					précedemment:
+					</div>Vous êtes enfin prêts à utiliser ce package. On crée alors le fichier de notification et le
+					fichier de commande à l'aide de artisan comme montré précedemment:
 					<div class="rectangle">
 						<div class="main">
 							php artisan make:notification ErrorAccountNotification<br>
 							php artisan make:command AccountCheckerCommand
 						</div>
-					</div>
-
-					Une fois les fichiers créés, dans le fichier de notification, on ajoute Teams dans la méthode
-					via().
-					Cette méthode s'occupe
-					d'envoyer la notification au service spécifié dans le tableau via().<br><br>Le fichier
-					<code>Notification</code>
+					</div>Une fois les fichiers créés, dans le fichier de notification, on ajoute Teams dans la méthode
+					via(). Cette méthode s'occupe d'envoyer la notification au service spécifié dans le tableau
+					via().<br>
+					<br>
+					Le fichier <code>Notification</code>
 					<div class="rectangle" style="width: 130% !important;">
 						<div class="main">
-							&lt?php<br>
+							&lt;?php<br>
 							<br>
 							namespace App\Notifications;<br>
 							<br>
-
 							use Illuminate\Bus\Queueable;<br>
 							use App\Models\User;<br>
 							use Illuminate\Notifications\Notification;<br>
@@ -574,8 +502,9 @@
 									*/<br>
 									public function __construct(User $user)<br>
 									{<br>
-									<div class="tab1">$this->user = $user;<br></div>
-									}<br>
+									<div class="tab1">
+										$this-&gt;user = $user;<br>
+									</div>}<br>
 									<br>
 									/**<br>
 									* Get the notification's delivery channels.<br>
@@ -585,33 +514,30 @@
 									*/<br>
 									public function via($notifiable)<br>
 									{<br>
-									<div class="tab1">return [MicrosoftTeamsChannel::class];<br></div>
-									}<br>
+									<div class="tab1">
+										return [MicrosoftTeamsChannel::class];<br>
+									</div>}<br>
 									<br>
 									public function toMicrosoftTeams($notifiable)<br>
 									{<br>
-									<div class="tab1">return MicrosoftTeamsMessage::create()</div>
+									<div class="tab1">
+										return MicrosoftTeamsMessage::create()
+									</div>
 									<div class="tab2">
-										->to(env('TEAMS_WEBHOOK_URL'))<br>
-										->type('error')<br>
-										->title('Erreur de paiement')
-										->content('Bonjour, ' . $this->user->name .<br>
-										',&lt;br&gt;&lt;br&gt;Votre paiement a été refusé. Veuillez mettre à jour
-										votre
+										-&gt;to(env('TEAMS_WEBHOOK_URL'))<br>
+										-&gt;type('error')<br>
+										-&gt;title('Erreur de paiement') -&gt;content('Bonjour, ' .
+										$this-&gt;user-&gt;name .<br>
+										',&lt;br&gt;&lt;br&gt;Votre paiement a été refusé. Veuillez mettre à jour votre
 										mode de paiement.&lt;br&gt;')<br>
-										->button('Voir votre compte', 'https://google.com');<br></div>
-									}<br>
-								</div>
-								}<br>
+										-&gt;button('Voir votre compte', 'https://google.com');<br>
+									</div>}<br>
+								</div>}<br>
 							</div>
-						</div>
-						<button id="leBtn" onclick="showMoreCodeFunc()">Voir plus</button>
-					</div>
-
-					Le fichier <code>Command</code>
+						</div><button id="leBtn" onclick="showMoreCodeFunc()">Voir plus</button>
+					</div>Le fichier <code>Command</code>
 					<div class="rectangle" style="width: 130% !important">
 						<div class="main">
-
 							&lt;?php<br>
 							namespace App\Console\Commands;<br>
 							<br>
@@ -621,21 +547,19 @@
 							use App\Models\User;<br>
 							<br>
 							class AccountCheckerCommand extends Command<br>
-
 							{<br>
 							<div id="showMoreCode2">
 								<div class="tab1">
 									/**<br>
 									<div class="tab1">
 										* The name and signature of the console command.<br>
-										* @var string<br></div>
-									*/<br>
+										* @var string<br>
+									</div>*/<br>
 									protected $signature = 'command:acct';<br>
 									<br>
 									/**<br>
 									* The console command description.<br>
-									*
-									* @var string<br>
+									* * @var string<br>
 									*/<br>
 									protected $description = 'Envoie notification au premier utilisateur de la bd
 									(id=1)';<br>
@@ -644,117 +568,79 @@
 									<div class="tab1">
 										* Execute the console command.<br>
 										*<br>
-										* @return int<br></div>
-									*/<br>
+										* @return int<br>
+									</div>*/<br>
 									public function handle()<br>
-
 									{<br>
 									<div class="tab1">
 										$user = User::find(1);<br>
 										<br>
 										Notification::route(NotificationChannels\MicrosoftTeams\MicrosoftTeamsChannel::class,
-										config('services.teams.webhook_url'))
-										-&gt;notify(new ErrorAccountNotification($user));<br>
+										config('services.teams.webhook_url')) -&gt;notify(new
+										ErrorAccountNotification($user));<br>
 									</div>}<br>
-								</div>
-								}<br>
+								</div>}<br>
 							</div>
-
 						</div><br>
 						<button id="leBtn2" onclick="showMoreCodeFunc2()">Voir plus</button>
-					</div>
-
-					Par la suite, nous lancerons la commande du fichier ci-haut:
+					</div>Par la suite, nous lancerons la commande du fichier ci-haut:
 					<div class="rectangle">
 						<div class="main">
 							php artisan command:acct
 						</div>
-					</div>
-
-					Finalement, je recois instantanèment la notification dans mon canal.
-					<img src="./img/config/teamsMessage.png">
-
-
-					</p>
+					</div>Finalement, je recois instantanèment la notification dans mon canal. <img
+						src="./img/config/teamsMessage.png" alt="teamsMessage">
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- End Notification -->
-
-
+	</div><!-- End Notification -->
 	<!-- Call To Action -->
 	<div class="cta cta--reverse">
 		<div class="container">
-
-
 			<div class="">
 				<h2 class="cta__title" style="margin-left: 20px;">Références</h2>
-				<p style="margin-left: -150% !important;">
+				<p style="margin-left: -150% !important;"></p>
 				<ul>
 					<a href="https://laravel.com/docs/9.x/installation">Documentation Laravel</a><br>
-					<a href="https://openclassrooms.com/fr/courses/4670706-adoptez-une-architecture-mvc-en-php/4678736-comment-fonctionne-une-architecture-mvc	">Openclassrooms</a><br>
-					<a href="https://github.com/laravel-notification-channels/microsoft-teams">Package Teams</a><br>
+					<a
+						href="https://openclassrooms.com/fr/courses/4670706-adoptez-une-architecture-mvc-en-php/4678736-comment-fonctionne-une-architecture-mvc">Openclassrooms</a><br>
+					<a href="https://github.com/laravel-notification-channels/microsoft-teams">Package
+						Laravel/Teams</a><br>
 				</ul>
-				</p>
 			</div>
 		</div>
-	</div>
-	<!-- Footer -->
+	</div><!-- Footer -->
 	<div class="footer footer--dark">
 		<div class="container">
 			<div class="footer__inner">
-				<a href="index.html" class="footer__textLogo">Evie theme</a>
-				<div class="footer__data">
-					<div class="footer__data__item">
-						<div class="footer__row">
-							Created by <a href="https://twitter.com/ninalimpi" target="_blank"
-								class="footer__link">Katerina Limpitsouni</a>
-						</div>
-						<div class="footer__row">
-							Code/design by <a href="https://twitter.com/anges244" target="_blank"
-								class="footer__link">Aggelos Gesoulis</a>
-						</div>
-					</div>
-					<div class="footer__data__item">
-						<div class="footer__row">Created for <a href="https://undraw.co" target="_blank"
-								class="footer__link">unDraw</a>
-						</div>
-					</div>
-					<div class="footer__data__item">
-						<div class="footer__row">
-							<a href="https://github.com/anges244/evie" target="_blank" class="footer__link">GitHub</a>
-						</div>
-						<div class="footer__row">
-							<a href="https://twitter.com/undraw_co" target="_blank" class="footer__link">Twitter</a>
-						</div>
-						<div class="footer__row">
-							<a href="https://www.facebook.com/undraw.co/" target="_blank"
-								class="footer__link">Facebook</a>
-						</div>
-						<div class="footer__row">
-							<a href="./additional.html" class="footer__link">MIT license</a>
-						</div>
+				<a href="index.html" class="footer__textLogo">Mohamed Hafdi Idrissi</a>
+				<div class="footer__data"></div>
+				<div class="footer__data__item">
+					<div class="footer__row">
+						<a href="https://www.linkedin.com/in/mohamed-hafdi-idrissi/"><img width="50px" target="_blank"
+								src="https://media-exp1.licdn.com/dms/image/C560BAQHaVYd13rRz3A/company-logo_200_200/0/1638831589865?e=2147483647&amp;v=beta&amp;t=Zq1zixRFUNMSm2Ldgu_hcJAYTL1gWG3VHKXO4kf9lDQ"
+								alt="1638831589865"></a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<script>
-			function showMoreCodeFunc() {
-				var x = document.getElementById("showMoreCode");
-				x.style.display = "block";
-				var y = document.getElementById("leBtn");
-				y.style.display = "none";
-			}
+	</div>
+	<script>
+		function showMoreCodeFunc() {
+			var x = document.getElementById("showMoreCode");
+			x.style.display = "block";
+			var y = document.getElementById("leBtn");
+			y.style.display = "none";
+		}
 
-			function showMoreCodeFunc2() {
-				var x = document.getElementById("showMoreCode2");
-				x.style.display = "block";
-				var y = document.getElementById("leBtn2");
-				y.style.display = "none";
-			}
-		</script>
-		<script src='js/app.min.js'></script>
+		function showMoreCodeFunc2() {
+			var x = document.getElementById("showMoreCode2");
+			x.style.display = "block";
+			var y = document.getElementById("leBtn2");
+			y.style.display = "none";
+		}
+	</script>
+	<script src='js/app.min.js'></script>
 </body>
 
 </html>
